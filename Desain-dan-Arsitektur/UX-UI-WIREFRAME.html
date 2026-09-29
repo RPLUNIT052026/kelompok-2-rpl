@@ -1,1 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe UI/UX: HyperEvac</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        /* Pola grid background untuk memberikan kesan blueprint/wireframe */
+        .wireframe-bg {
+            background-size: 20px 20px;
+            background-image:
+                linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+                linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        }
+        .placeholder-box {
+            background-image: repeating-linear-gradient(45deg, #f1f5f9 25%, transparent 25%, transparent 75%, #f1f5f9 75%, #f1f5f9), repeating-linear-gradient(45deg, #f1f5f9 25%, #ffffff 25%, #ffffff 75%, #f1f5f9 75%, #f1f5f9);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 flex flex-col items-center">
 
+    <div class="max-w-7xl w-full mb-8">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                    <i data-lucide="layout-template" class="text-brand-500"></i> UI/UX Wireframe Blueprint
+                </h1>
+                <p class="text-sm text-slate-500 mt-1">Sistem Navigasi Evakuasi Bencana Hyper-Lokal (HyperEvac)</p>
+            </div>
+            <div class="hidden md:flex gap-4">
+                <span class="flex items-center gap-1 text-xs font-mono bg-slate-100 px-2 py-1 rounded text-slate-600 border border-slate-200"><div class="w-3 h-3 bg-red-100 border border-red-400 rounded-sm"></div> Alert/Danger</span>
+                <span class="flex items-center gap-1 text-xs font-mono bg-slate-100 px-2 py-1 rounded text-slate-600 border border-slate-200"><div class="w-3 h-3 bg-emerald-100 border border-emerald-400 rounded-sm"></div> Safe Route</span>
+                <span class="flex items-center gap-1 text-xs font-mono bg-slate-100 px-2 py-1 rounded text-slate-600 border border-slate-200"><div class="w-3 h-3 bg-slate-200 border border-slate-400 border-dashed rounded-sm"></div> Wireframe Block</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- ================= MOBILE APP WIREFRAME (WARGA) ================= -->
+        <div class="lg:col-span-4 flex flex-col items-center">
+            <h2 class="text-sm font-bold text-slate-700 uppercase tracking-widest mb-4 flex items-center gap-2">
+                <i data-lucide="smartphone" class="w-4 h-4"></i> Mobile App (End-User)
+            </h2>
+            
+            <!-- Smartphone Frame -->
+            <div class="w-[320px] h-[650px] bg-white rounded-[2.5rem] border-[8px] border-slate-800 relative overflow-hidden shadow-xl wireframe-bg flex flex-col">
+                <!-- Notch -->
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-xl z-20"></div>
+
+                <!-- Mobile Header -->
+                <div class="bg-white/90 backdrop-blur border-b border-slate-200 pt-8 pb-3 px-4 flex justify-between items-center relative z-10">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-slate-200 border-2 border-slate-300 flex items-center justify-center">
+                            <i data-lucide="user" class="w-4 h-4 text-slate-500"></i>
+                        </div>
+                        <div class="h-4 w-20 bg-slate-200 rounded"></div>
+                    </div>
+                    <div class="w-8 h-8 rounded bg-slate-100 border border-slate-300 flex items-center justify-center">
+                        <i data-lucide="menu" class="w-4 h-4 text-slate-600"></i>
+                    </div>
+                </div>
+
+                <!-- Critical Alert Banner -->
+                <div class="bg-red-50 border-y border-red-200 p-3 flex gap-3 items-start relative z-10 shadow-sm">
+                    <i data-lucide="triangle-alert" class="w-5 h-5 text-red-500 flex-shrink-0 animate-pulse"></i>
+                    <div>
+                        <div class="h-3 w-32 bg-red-200 rounded mb-1.5"></div>
+                        <div class="h-2 w-48 bg-red-100 rounded mb-1"></div>
+                        <div class="h-2 w-40 bg-red-100 rounded"></div>
+                    </div>
+                </div>
+
+                <!-- Map Area (Digital Twin Client View) -->
+                <div class="flex-1 relative placeholder-box border-b border-slate-200 overflow-hidden">
+                    <div class="absolute top-2 right-2 bg-white/80 p-1.5 rounded shadow-sm border border-slate-200">
+                        <i data-lucide="compass" class="w-4 h-4 text-slate-500"></i>
+                    </div>
+                    
+                    <!-- Simulated Hazard Zone -->
+                    <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-red-500/20 border-2 border-red-400 border-dashed rounded-full flex items-center justify-center">
+                        <div class="w-16 h-16 bg-red-500/30 rounded-full animate-ping"></div>
+                        <span class="absolute text-[10px] font-mono text-red-700 bg-white/80 px-1 rounded">ZONA MERAH</span>
+                    </div>
+
+                    <!-- Simulated Evacuation Route -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 5;">
+                        <path d="M 160 300 Q 200 250 250 150 T 280 50" fill="none" stroke="#10b981" stroke-width="6" stroke-dasharray="8,4" class="animate-[dash_1s_linear_infinite]" />
+                    </svg>
+
+                    <!-- User Location Pin -->
+                    <div class="absolute top-[300px] left-[150px] w-4 h-4 bg-blue-500 border-2 border-white rounded-full shadow z-10"></div>
+                    <!-- Evacuation Center Pin -->
+                    <div class="absolute top-[40px] left-[270px] w-6 h-6 bg-emerald-500 border-2 border-white rounded-full shadow flex items-center justify-center z-10">
+                        <i data-lucide="tent" class="w-3 h-3 text-white"></i>
+                    </div>
+                </div>
+
+                <!-- Bottom Action Sheet -->
+                <div class="bg-white p-4 rounded-t-2xl shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 flex flex-col gap-3">
+                    <div class="w-12 h-1 bg-slate-300 rounded-full mx-auto mb-1"></div>
+                    
+                    <div class="flex justify-between items-center mb-1">
+                        <div>
+                            <div class="h-4 w-24 bg-slate-300 rounded mb-1"></div>
+                            <div class="h-3 w-16 bg-slate-200 rounded"></div>
+                        </div>
+                        <div class="text-right">
+                            <div class="h-5 w-16 bg-emerald-100 border border-emerald-300 rounded mb-1 inline-block"></div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        <div class="h-10 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700">
+                            <div class="h-3 w-16 bg-slate-500 rounded"></div>
+                        </div>
+                        <!-- Crowdsourcing Button -->
+                        <div class="h-10 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-slate-300 gap-2">
+                            <i data-lucide="camera" class="w-4 h-4 text-slate-400"></i>
+                            <div class="h-3 w-12 bg-slate-200 rounded"></div>
+                        </div>
+                    </div>
+
+                    <!-- Giant SOS Button -->
+                    <div class="h-12 w-full bg-red-100 border-2 border-red-400 border-dashed rounded-lg flex items-center justify-center mt-1 gap-2">
+                        <i data-lucide="shield-alert" class="w-5 h-5 text-red-500"></i>
+                        <span class="text-red-500 font-mono text-sm font-bold">SOS DARURAT</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-4 text-center max-w-[280px]">Wireframe aplikasi warga: Fokus pada kejelasan rute, tombol laporan (crowdsourcing), dan notifikasi darurat.</p>
+        </div>
+
+
+        <!-- ================= WEB DASHBOARD WIREFRAME (BPBD) ================= -->
+        <div class="lg:col-span-8 flex flex-col items-center">
+            <h2 class="text-sm font-bold text-slate-700 uppercase tracking-widest mb-4 flex items-center gap-2">
+                <i data-lucide="monitor" class="w-4 h-4"></i> Command Center Web (BPBD / Admin)
+            </h2>
+            
+            <!-- Browser Window Frame -->
+            <div class="w-full h-[650px] bg-white rounded-xl border-2 border-slate-300 overflow-hidden shadow-xl flex flex-col">
+                <!-- Browser Header -->
+                <div class="h-8 bg-slate-200 border-b border-slate-300 flex items-center px-3 gap-2">
+                    <div class="w-3 h-3 rounded-full bg-slate-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-400"></div>
+                    <div class="mx-auto h-4 w-48 bg-white rounded-sm border border-slate-300"></div>
+                </div>
+
+                <div class="flex-1 flex overflow-hidden">
+                    <!-- Sidebar -->
+                    <div class="w-48 bg-slate-800 flex flex-col border-r border-slate-700">
+                        <div class="p-4 border-b border-slate-700 flex items-center gap-2">
+                            <div class="w-6 h-6 bg-slate-600 rounded"></div>
+                            <div class="h-3 w-20 bg-slate-600 rounded"></div>
+                        </div>
+                        <div class="p-4 space-y-4 flex-1">
+                            <div class="flex items-center gap-3 opacity-100">
+                                <i data-lucide="layout-dashboard" class="w-4 h-4 text-white"></i>
+                                <div class="h-3 w-24 bg-slate-600 rounded"></div>
+                            </div>
+                            <div class="flex items-center gap-3 opacity-50">
+                                <i data-lucide="map" class="w-4 h-4 text-white"></i>
+                                <div class="h-3 w-20 bg-slate-600 rounded"></div>
+                            </div>
+                            <div class="flex items-center gap-3 opacity-50">
+                                <i data-lucide="users" class="w-4 h-4 text-white"></i>
+                                <div class="h-3 w-16 bg-slate-600 rounded"></div>
+                            </div>
+                            <div class="flex items-center gap-3 opacity-50">
+                                <i data-lucide="settings" class="w-4 h-4 text-white"></i>
+                                <div class="h-3 w-20 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Dashboard Content -->
+                    <div class="flex-1 flex flex-col wireframe-bg">
+                        <!-- Topbar -->
+                        <div class="h-14 bg-white border-b border-slate-200 flex justify-between items-center px-6">
+                            <div class="h-4 w-32 bg-slate-200 rounded"></div>
+                            <div class="flex gap-4 items-center">
+                                <div class="h-6 w-32 bg-slate-100 border border-slate-200 rounded flex items-center px-2">
+                                    <i data-lucide="search" class="w-3 h-3 text-slate-400"></i>
+                                </div>
+                                <div class="w-8 h-8 bg-slate-200 rounded-full border border-slate-300"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="flex-1 p-6 flex gap-6 overflow-hidden">
+                            <!-- Left: Map / Digital Twin -->
+                            <div class="flex-1 flex flex-col gap-4">
+                                <!-- Stats Row -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm flex flex-col">
+                                        <div class="h-2 w-16 bg-slate-200 rounded mb-2"></div>
+                                        <div class="h-6 w-12 bg-slate-800 rounded"></div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border-2 border-red-200 shadow-sm flex flex-col bg-red-50/50">
+                                        <div class="h-2 w-20 bg-red-200 rounded mb-2"></div>
+                                        <div class="h-6 w-16 bg-red-400 rounded"></div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm flex flex-col">
+                                        <div class="h-2 w-24 bg-slate-200 rounded mb-2"></div>
+                                        <div class="h-6 w-10 bg-slate-800 rounded"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Big Map (Digital Twin Engine) -->
+                                <div class="flex-1 bg-white rounded-lg border border-slate-300 relative placeholder-box overflow-hidden shadow-sm">
+                                    <!-- Label -->
+                                    <div class="absolute top-3 left-3 bg-white/90 border border-slate-300 px-2 py-1 rounded text-[10px] font-mono text-slate-600 flex items-center gap-2 z-20">
+                                        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                                        DIGITAL TWIN SIMULATION: ACTIVE
+                                    </div>
+
+                                    <!-- Map Elements (Wireframe Style) -->
+                                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                        <!-- Grid Lines to simulate city blocks -->
+                                        <div class="w-full h-full flex flex-col justify-around opacity-20">
+                                            <div class="w-full h-1 bg-slate-400"></div>
+                                            <div class="w-full h-2 bg-slate-400"></div>
+                                            <div class="w-full h-1 bg-slate-400"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Multi-Hazard Zones -->
+                                    <div class="absolute top-20 left-20 w-40 h-40 bg-red-100 border-2 border-red-400 border-dashed rounded-full opacity-70"></div>
+                                    <div class="absolute bottom-10 right-32 w-24 h-24 bg-red-100 border-2 border-red-400 border-dashed rounded-full opacity-70"></div>
+                                    
+                                    <!-- User Clusters (Dots) -->
+                                    <div class="absolute top-32 left-10 flex gap-1"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><div class="w-2 h-2 bg-slate-600 rounded-full"></div></div>
+                                    <div class="absolute bottom-20 left-1/2 flex gap-1"><div class="w-2 h-2 bg-slate-600 rounded-full"></div><div class="w-2 h-2 bg-slate-600 rounded-full"></div><div class="w-2 h-2 bg-slate-600 rounded-full"></div></div>
+
+                                    <!-- Evacuation Routes Control (Lines) -->
+                                    <svg class="absolute inset-0 w-full h-full" style="z-index: 10;">
+                                        <!-- Safe Route -->
+                                        <path d="M 50 300 L 200 300 L 400 150" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="4,4" />
+                                        <!-- Blocked Route (Manual Override by BPBD) -->
+                                        <path d="M 200 300 L 300 280 L 350 200" fill="none" stroke="#ef4444" stroke-width="4" />
+                                        <circle cx="250" cy="290" r="8" fill="white" stroke="#ef4444" stroke-width="3" />
+                                        <line x1="245" y1="285" x2="255" y2="295" stroke="#ef4444" stroke-width="2" />
+                                        <line x1="255" y1="285" x2="245" y2="295" stroke="#ef4444" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Right: Side Panel (Logs & Controls) -->
+                            <div class="w-64 flex flex-col gap-4">
+                                <!-- Manual Controls -->
+                                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                                    <div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-2">
+                                        <i data-lucide="sliders" class="w-4 h-4 text-slate-500"></i>
+                                        <div class="h-3 w-20 bg-slate-300 rounded"></div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div class="h-8 bg-slate-100 border border-slate-200 rounded flex items-center justify-center">
+                                            <div class="h-2 w-24 bg-slate-300 rounded"></div>
+                                        </div>
+                                        <div class="h-8 bg-red-50 border border-red-200 rounded flex items-center justify-center border-dashed">
+                                            <div class="h-2 w-32 bg-red-300 rounded"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Live Crowdsource Logs -->
+                                <div class="flex-1 bg-white p-4 rounded-lg border border-slate-200 shadow-sm flex flex-col">
+                                    <div class="flex items-center gap-2 mb-4 border-b border-slate-100 pb-2">
+                                        <i data-lucide="activity" class="w-4 h-4 text-slate-500"></i>
+                                        <div class="h-3 w-32 bg-slate-300 rounded"></div>
+                                    </div>
+                                    <div class="flex-1 space-y-3 overflow-y-auto">
+                                        <!-- Log item -->
+                                        <div class="flex gap-2">
+                                            <div class="w-6 h-6 bg-amber-100 rounded flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="camera" class="w-3 h-3 text-amber-500"></i>
+                                            </div>
+                                            <div>
+                                                <div class="h-2 w-24 bg-slate-300 rounded mb-1"></div>
+                                                <div class="h-2 w-32 bg-slate-200 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Log item -->
+                                        <div class="flex gap-2">
+                                            <div class="w-6 h-6 bg-red-100 rounded flex items-center justify-center flex-shrink-0">
+                                                <i data-lucide="alert-circle" class="w-3 h-3 text-red-500"></i>
+                                            </div>
+                                            <div>
+                                                <div class="h-2 w-20 bg-slate-300 rounded mb-1"></div>
+                                                <div class="h-2 w-32 bg-slate-200 rounded"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Log item -->
+                                        <div class="flex gap-2 opacity-50">
+                                            <div class="w-6 h-6 bg-slate-100 rounded flex-shrink-0"></div>
+                                            <div>
+                                                <div class="h-2 w-28 bg-slate-200 rounded mb-1"></div>
+                                                <div class="h-2 w-16 bg-slate-200 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-4 text-center max-w-[400px]">Wireframe Web Dashboard BPBD: Fokus pada pemantauan Digital Twin, visualisasi pergerakan massa, laporan crowdsourcing, dan fitur blokir rute secara manual.</p>
+        </div>
+
+    </div>
+
+    <div class="mt-12 bg-blue-50 border border-blue-200 p-4 rounded-lg text-sm text-blue-800 max-w-3xl text-center shadow-sm">
+        <strong class="block mb-1"><i data-lucide="lightbulb" class="w-4 h-4 inline"></i> Tips Presentasi:</strong>
+        Ambil <i>screenshot</i> (tangkapan layar) dari halaman ini, lalu potong (crop) bagian Mobile App dan Web Dashboard secara terpisah. Masukkan gambar tersebut ke dalam slide presentasi untuk membuktikan bahwa kalian tidak hanya menganalisis proses RPL (Model Spiral), tetapi juga merancang desain solusi akhirnya.
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
