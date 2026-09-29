@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=HYPEREVAC%20SYSTEM&fontSize=50&fontAlignY=38&desc=Peringatan%20Dini%20%26%20Navigasi%20Evakuasi%20Bencana&descAlignY=60&descAlign=50" />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=45&pause=1000&color=0D8ABC&center=true&vCenter=true&width=800&height=100&lines=HYPEREVAC+SYSTEM;PERINGATAN+DINI+BENCANA;NAVIGASI+EVAKUASI+LOKAL" alt="Title" />
+  </a>
 </p>
 
 <p align="center">
@@ -16,7 +18,7 @@
 ---
 
 ## 📖 Tentang Proyek
-**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Sistem Informasi, Universitas Samudra**. 
+**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Informatika, Universitas Samudra**. 
 
 Menggunakan pendekatan **Software-Only**, sistem ini menggantikan sensor fisik yang mahal dan rawan rusak dengan tarikan data API Publik (BMKG & USGS) secara *real-time*. Dikembangkan dengan **Model Spiral** yang berfokus pada analisis risiko (Critical-Safety) untuk menjamin keandalan sistem saat kondisi darurat.
 
