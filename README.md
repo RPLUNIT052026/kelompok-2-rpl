@@ -40,11 +40,11 @@ Seluruh dokumentasi proyek, desain teknis, dan kode prototipe tersusun rapi di d
    - [☁️ Deployment Architecture](./docs/Desain-dan-Arsitektur/DEPLOYMENT.md): Arsitektur cloud & infrastruktur microservices.
    - [🔌 API Specification](./docs/Desain-dan-Arsitektur/API-SPEC.md): Kontrak & spesifikasi endpoint REST API.
 
-3. **💻 Implementasi & Prototipe (`docs/setup-code/`)**
-   - [🐍 Engine Agregator BMKG (`fetch_bmkg.py`)](./docs/setup-code/aggregator/fetch_bmkg.py): Script penarik & parser API BMKG dengan retry/cache fallback[cite: 4].
-   - [🧪 Unit Testing (`test_parse.py`)](./docs/setup-code/aggregator/test_parse.py): Pengujian offline parser & skenario kegagalan jaringan[cite: 6].
-   - [🐳 Docker Compose](./docs/setup-code/docker-compose.yml): Service PostgreSQL + PostGIS database.
-   - [📖 Panduan Jalankan Kode](./docs/setup-code/README.md): Instruksi eksekusi & testing prototipe.
+3. **💻 Implementasi & Prototipe (`docs/Setup-Code/`)**
+   - [🐍 Engine Agregator BMKG (`fetch_bmkg.py`)](./docs/Setup-Code/aggregator/fetch_bmkg.py): Script penarik & parser API BMKG dengan retry/cache fallback[cite: 4].
+   - [🧪 Unit Testing (`test_parse.py`)](./docs/Setup-Code/aggregator/test_parse.py): Pengujian offline parser & skenario kegagalan jaringan[cite: 6].
+   - [🐳 Docker Compose](./docs/Setup-Code/docker-compose.yml): Service PostgreSQL + PostGIS database.
+   - [📖 Panduan Jalankan Kode](./docs/Setup-Code/README.md): Instruksi eksekusi & testing prototipe.
 
 ---
 
