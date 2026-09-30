@@ -1,0 +1,15 @@
+# --- HTTP & Data Fetching ---
+requests>=2.31.0
+
+# --- Environment & Configuration ---
+python-dotenv>=1.0.0
+
+# --- Database & PostGIS Integration ---
+psycopg2-binary>=2.9.9
+SQLAlchemy>=2.0.0
+GeoAlchemy2>=0.14.0
+
+# --- Unit Testing & Code Quality ---
+pytest>=7.4.0
+pytest-cov>=4.1.0
+requests-mock>=1.11.0
