@@ -18,7 +18,7 @@
 ---
 
 ## 📖 Tentang Proyek
-**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Sistem Informasi, Universitas Samudra**[cite: 1]. 
+**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Informatika, Universitas Samudra**[cite: 1]. 
 
 Menggunakan pendekatan **Software-Only**, sistem ini menggantikan sensor fisik yang mahal dan rawan rusak dengan tarikan data API Publik (BMKG & USGS) secara *real-time*[cite: 1]. Dikembangkan dengan **Model Spiral** yang berfokus pada analisis risiko (*Critical-Safety*) untuk menjamin keandalan sistem saat kondisi darurat[cite: 1].
 
