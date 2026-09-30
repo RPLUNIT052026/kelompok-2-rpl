@@ -11,40 +11,40 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=github" alt="Status" />
   <img src="https://img.shields.io/badge/Methodology-Spiral%20Model-blue?style=for-the-badge&logo=opslevel" alt="SDLC" />
-  <img src="https://img.shields.io/badge/Course-Rekayasa%20Perangkat%20Lunan-orange?style=for-the-badge" alt="RPL" />
+  <img src="https://img.shields.io/badge/Course-Rekayasa%20Perangkat%20Lunak-orange?style=for-the-badge" alt="RPL" />
   <img src="https://img.shields.io/badge/Platform-Mobile%20%26%20Web-lightgrey?style=for-the-badge" alt="Platform" />
 </p>
 
 ---
 
 ## 📖 Tentang Proyek
-**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Sistem Informasi, Universitas Samudra**. 
+**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Sistem Informasi, Universitas Samudra**[cite: 1]. 
 
-Menggunakan pendekatan **Software-Only**, sistem ini menggantikan sensor fisik yang mahal dan rawan rusak dengan tarikan data API Publik (BMKG & USGS) secara *real-time*. Dikembangkan dengan **Model Spiral** yang berfokus pada analisis risiko (*Critical-Safety*) untuk menjamin keandalan sistem saat kondisi darurat[cite: 1].
+Menggunakan pendekatan **Software-Only**, sistem ini menggantikan sensor fisik yang mahal dan rawan rusak dengan tarikan data API Publik (BMKG & USGS) secara *real-time*[cite: 1]. Dikembangkan dengan **Model Spiral** yang berfokus pada analisis risiko (*Critical-Safety*) untuk menjamin keandalan sistem saat kondisi darurat[cite: 1].
 
 ---
 
-## 📂 Navigasi Berkas & Dokumentasi
+## 📂 Navigasi Berkas & Dokumentasi (`docs/`)
 
-Repositori ini terbagi menjadi 3 bagian utama:
+Seluruh dokumentasi proyek, desain teknis, dan kode prototipe tersusun rapi di dalam direktori **`docs/`**:
 
-1. **[📄 Proposal & Materi Presentasi (`docs/`)](./docs/)**
+1. **📄 Dokumen Proposal & Presentasi**
    - [📄 PROPOSAL.md](./docs/PROPOSAL.md): Proposal akademis proyek HyperEvac System secara menyeluruh[cite: 1].
-   - [📊 Slide Presentasi RPL (`slides/rpl.pdf`)](./docs/slides/rpl.pdf): Bahan tayang presentasi kelompok[cite: 1].
+   - [📊 Slide Presentasi (`Kelompok 2.pdf`)](./docs/slides/Kelompok%202.pdf): Bahan tayang presentasi kelompok[cite: 1].
 
-2. **[📐 Desain & Arsitektur Teknis (`Desain-dan-Arsitektur/`)](./Desain-dan-Arsitektur/)**
-   - [🎨 UI/UX Wireframe](./Desain-dan-Arsitektur/UI-UX-WIREFRAME.md): Rancangan antarmuka Mobile & Web Dashboard.
-   - [👤 Use Case Diagram](./Desain-dan-Arsitektur/USE-CASE.md): Kualifikasi aktor dan interaksi use case.
-   - [🔄 Activity Diagram](./Desain-dan-Arsitektur/ACTIVITY-DIAGRAM.md): Alur proses bisnis sistem.
-   - [🧱 Class Diagram & Database SQL](./Desain-dan-Arsitektur/CLASS-DAN-DATABASE.md): Skema PostgreSQL/PostGIS (WGS 84 SRID 4326)[cite: 3].
-   - [☁️ Deployment Architecture](./Desain-dan-Arsitektur/DEPLOYMENT.md): Arsitektur cloud & infrastruktur microservices.
-   - [🔌 API Specification](./Desain-dan-Arsitektur/API-SPEC.md): Kontrak & spesifikasi endpoint REST API.
+2. **📐 Desain & Arsitektur Teknis (`docs/Desain-dan-Arsitektur/`)**
+   - [🎨 UI/UX Wireframe](./docs/Desain-dan-Arsitektur/UI-UX-WIREFRAME.md): Rancangan antarmuka Mobile & Web Dashboard.
+   - [👤 Use Case Diagram](./docs/Desain-dan-Arsitektur/USE-CASE.md): Kualifikasi aktor dan interaksi use case.
+   - [🔄 Activity Diagram](./docs/Desain-dan-Arsitektur/ACTIVITY-DIAGRAM.md): Alur proses bisnis sistem.
+   - [🧱 Class Diagram & Database SQL](./docs/Desain-dan-Arsitektur/CLASS-DAN-DATABASE.md): Skema PostgreSQL/PostGIS (WGS 84 SRID 4326)[cite: 3].
+   - [☁️ Deployment Architecture](./docs/Desain-dan-Arsitektur/DEPLOYMENT.md): Arsitektur cloud & infrastruktur microservices.
+   - [🔌 API Specification](./docs/Desain-dan-Arsitektur/API-SPEC.md): Kontrak & spesifikasi endpoint REST API.
 
-3. **[💻 Implementasi & Prototipe (`setup-code/`)](./setup-code/)**
-   - [🐍 Engine Agregator BMKG (`fetch_bmkg.py`)](./setup-code/aggregator/fetch_bmkg.py): Script penarik & parser API BMKG dengan retry/cache fallback.
-   - [🧪 Unit Testing (`test_parse.py`)](./setup-code/aggregator/test_parse.py): Pengujian offline parser & skenario kegagalan jaringan.
-   - [🐳 Docker Compose](./setup-code/docker-compose.yml): Service PostgreSQL + PostGIS database.
-   - [📖 Panduan Jalankan Kode](./setup-code/README.md): Instruksi eksekusi & testing prototipe.
+3. **💻 Implementasi & Prototipe (`docs/setup-code/`)**
+   - [🐍 Engine Agregator BMKG (`fetch_bmkg.py`)](./docs/setup-code/aggregator/fetch_bmkg.py): Script penarik & parser API BMKG dengan retry/cache fallback[cite: 4].
+   - [🧪 Unit Testing (`test_parse.py`)](./docs/setup-code/aggregator/test_parse.py): Pengujian offline parser & skenario kegagalan jaringan[cite: 6].
+   - [🐳 Docker Compose](./docs/setup-code/docker-compose.yml): Service PostgreSQL + PostGIS database.
+   - [📖 Panduan Jalankan Kode](./docs/setup-code/README.md): Instruksi eksekusi & testing prototipe.
 
 ---
 
