@@ -122,7 +122,7 @@ Peta interaksi multi-pengguna terhadap komponen perangkat lunak (*Multi-App Syst
 |---|---|---|---|
 | **Warga Area Rawan** | End-user / Client | 📱 Mobile App | Menerima *push notification* saat darurat · Melihat peta rute evakuasi interaktif · Melaporkan jalan tertutup via tombol SOS |
 | **BPBD & Tim SAR** 🛡️ *Pusat Kendali* | Operator & Decision Maker | 🖥️ Web Dashboard | Memantau pergerakan warga (Digital Twin) · Memverifikasi data cuaca/gempa · Memblokir rute berbahaya secara manual |
-| **Tim Maintainer** | System Administrator | ☁️ Cloud Console | Menjaga *uptime* API Integrator · Mengelola *Load Balancer* saat trafik memuncak · Pembaruan iteratif algoritma *routing* |
+| **Tim Maintainer** | System Administrator | ☁️️ Cloud Console | Menjaga *uptime* API Integrator · Mengelola *Load Balancer* saat trafik memuncak · Pembaruan iteratif algoritma *routing* |
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
@@ -155,15 +155,15 @@ Peta interaksi multi-pengguna terhadap komponen perangkat lunak (*Multi-App Syst
 | NFR-03 | **Skalabilitas** | Mendukung lonjakan trafik melalui *load balancer* dan *horizontal scaling* |
 | NFR-04 | **Ketahanan** | Ada *fallback* saat API publik *down/timeout* (cache data terakhir + penanda usia data)[cite: 4] |
 | NFR-05 | **Keamanan** | Autentikasi berbasis token, RBAC untuk dashboard, enkripsi HTTPS |
-| NFR-06 | **Privasi** | Data lokasi warga diminimalkan, dianonimkan untuk analitik |
-| NFR-07 | **Usability** | Antarmuka mobile sederhana, dapat dipakai dalam kondisi panik |
+| NFR-06 | **Privasi** | Data lokasi warga diminimalkan, dianonimkan untuk analitik[cite: 1] |
+| NFR-07 | **Usability** | Antarmuka mobile sederhana, dapat dipakai dalam kondisi panik[cite: 1] |
 | NFR-08 | **Keandalan data** | Laporan crowdsourcing diberi skor kepercayaan sebelum memengaruhi rute |
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
 ## 🏗️ Arsitektur Sistem
 
-Tech stack berbasis cloud dengan pendekatan **microservices**, tanpa perangkat keras fisik.
+Tech stack berbasis cloud dengan pendekatan **microservices**, tanpa perangkat keras fisik[cite: 1].
 
 ```mermaid
 flowchart LR
