@@ -1,5 +1,3 @@
----
-
 ### 3. File: `docs/Desain-dan-Arsitektur/SEQUENCE-DIAGRAM.md`
 
 ```markdown
