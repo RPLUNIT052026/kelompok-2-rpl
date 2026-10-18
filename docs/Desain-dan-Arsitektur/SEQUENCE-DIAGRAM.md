@@ -1,6 +1,3 @@
-### 3. File: `docs/Desain-dan-Arsitektur/SEQUENCE-DIAGRAM.md`
-
-```markdown
 <div align="center">
 
 ![Dokumen](https://img.shields.io/badge/DOKUMEN-SEQUENCE_DIAGRAM-00f0ff?style=for-the-badge&labelColor=0b1020)
