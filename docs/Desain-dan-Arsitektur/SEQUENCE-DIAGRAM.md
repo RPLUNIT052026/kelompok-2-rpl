@@ -1,4 +1,3 @@
-```markdown
 # Sequence Diagram
 
 Diagram ini menjelaskan urutan komunikasi antar-komponen saat sistem mengambil data eksternal, melakukan *parsing*, menyimpannya ke database, dan menampilkannya ke pengguna.
@@ -26,3 +25,4 @@ sequenceDiagram
     DB-->>API: Return Dataset
     API-->>UI: Response JSON
     UI-->>User: Tampilkan Informasi & Status
+```
