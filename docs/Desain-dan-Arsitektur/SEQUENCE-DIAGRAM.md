@@ -1,8 +1,3 @@
----
-
-### C. `SEQUENCE-DIAGRAM.md` (Baru)
-Menggambarkan urutan komunikasi antar-komponen secara kronologis, khususnya untuk skenario pengambilan dan *parsing* data pada modul `aggregator/fetch_bmkg.py` hingga disajikan melalui API (`API-SPEC.md`)[cite: 1].
-
 ```markdown
 # Sequence Diagram
 
