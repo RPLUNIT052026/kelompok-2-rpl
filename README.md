@@ -1,97 +1,126 @@
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=45&pause=1000&color=0D8ABC&center=true&vCenter=true&width=800&height=100&lines=HYPEREVAC+SYSTEM;PERINGATAN+DINI+BENCANA;NAVIGASI+EVAKUASI+LOKAL" alt="Title" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=45&pause=1000&color=0D8ABC&center=true&vCenter=true&width=800&height=100&lines=HYPEREVAC+SYSTEM;PERINGATAN+DINI+BENCANA;NAVIGASI+EVAKUASI+LOKAL" alt="HyperEvac System" />
   </a>
-</p>
-
-<p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=27F118&center=true&vCenter=true&width=600&lines=Hyper-Lokal+Real-Time+Data+Aggregation;Dynamic+Routing+API+Integration;Live+Digital+Twin+Simulation;Software-Only+Approach!" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=github" alt="Status" />
   <img src="https://img.shields.io/badge/Methodology-Spiral%20Model-blue?style=for-the-badge&logo=opslevel" alt="SDLC" />
-  <img src="https://img.shields.io/badge/Course-Rekayasa%20Perangkat%20Lunak-orange?style=for-the-badge" alt="RPL" />
+  <img src="https://img.shields.io/badge/Course-Rekayasa%20Perangkat%20Lunak-orange?style=for-the-badge&logo=bookstack" alt="RPL" />
   <img src="https://img.shields.io/badge/Platform-Mobile%20%26%20Web-lightgrey?style=for-the-badge" alt="Platform" />
 </p>
 
 ---
 
 ## 📖 Tentang Proyek
-**HyperEvac System** adalah sebuah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal yang dikembangkan untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak** pada program studi **Informatika, Universitas Samudra**[cite: 1]. 
 
-Menggunakan pendekatan **Software-Only**, sistem ini menggantikan sensor fisik yang mahal dan rawan rusak dengan tarikan data API Publik (BMKG & USGS) secara *real-time*[cite: 1]. Dikembangkan dengan **Model Spiral** yang berfokus pada analisis risiko (*Critical-Safety*) untuk menjamin keandalan sistem saat kondisi darurat[cite: 1].
+**HyperEvac System** adalah sistem informasi peringatan dini dan navigasi evakuasi bencana hyper-lokal untuk memenuhi tugas mata kuliah **Rekayasa Perangkat Lunak**, Program Studi **Informatika, Universitas Samudra**.
 
----
+Pendekatan **software-only** mengagregasi data publik BMKG dan USGS tanpa sensor fisik. Sistem dirancang dengan **Model Spiral** yang berfokus pada mitigasi risiko *critical-safety*. Digital Twin juga sepenuhnya **software-based, tanpa sensor fisik/IoT**; estimasi tinggi genangan bersumber dari curah hujan BMKG, laporan warga, atau input manual Operator BPBD.
 
-## 📂 Navigasi Berkas & Dokumentasi (`docs/`)
-
-Seluruh dokumentasi proyek, desain teknis, dan kode prototipe tersusun rapi di dalam direktori **`docs/`**:
-
-1. **📄 Dokumen Proposal & Presentasi**
-   - [📄 PROPOSAL.md](./docs/PROPOSAL.md): Proposal akademis proyek HyperEvac System secara menyeluruh[cite: 1].
-   - [📊 Slide Presentasi (`Kelompok 2.pdf`)](./docs/slides/Kelompok%202.pdf): Bahan tayang presentasi kelompok[cite: 1].
-
-2. **📐 Desain & Arsitektur Teknis (`docs/Desain-dan-Arsitektur/`)**
-   - [🎨 UI/UX Wireframe](./docs/Desain-dan-Arsitektur/UI-UX-WIREFRAME.md): Rancangan antarmuka Mobile & Web Dashboard.
-   - [👤 Use Case Diagram](./docs/Desain-dan-Arsitektur/USE-CASE.md): Kualifikasi aktor dan interaksi use case.
-   - [🔄 Activity Diagram](./docs/Desain-dan-Arsitektur/ACTIVITY-DIAGRAM.md): Alur proses bisnis sistem.
-   - [🧱 Class Diagram & Database SQL](./docs/Desain-dan-Arsitektur/CLASS-DAN-DATABASE.md): Skema PostgreSQL/PostGIS (WGS 84 SRID 4326)[cite: 3].
-   - [☁️ Deployment Architecture](./docs/Desain-dan-Arsitektur/DEPLOYMENT.md): Arsitektur cloud & infrastruktur microservices.
-   - [🔌 API Specification](./docs/Desain-dan-Arsitektur/API-SPEC.md): Kontrak & spesifikasi endpoint REST API.
-
-3. **💻 Implementasi & Prototipe (`docs/Setup-Code/`)**
-   - [🐍 Engine Agregator BMKG (`fetch_bmkg.py`)](./docs/Setup-Code/aggregator/fetch_bmkg.py): Script penarik & parser API BMKG dengan retry/cache fallback[cite: 4].
-   - [🧪 Unit Testing (`test_parse.py`)](./docs/Setup-Code/aggregator/test_parse.py): Pengujian offline parser & skenario kegagalan jaringan[cite: 6].
-   - [🐳 Docker Compose](./docs/Setup-Code/docker-compose.yml): Service PostgreSQL + PostGIS database.
-   - [📖 Panduan Jalankan Kode](./docs/Setup-Code/README.md): Instruksi eksekusi & testing prototipe.
+> **Status:** Implementasi Sprint 3 tersedia: backend FastAPI, dashboard operator React, dan aplikasi warga Flutter. Infrastruktur database dan prototipe aggregator Siklus 1 tersimpan di `sprint-3/Setup-Code/`. Validasi lokal mencakup pytest backend, build dashboard, serta analyze dan test mobile; deployment produksi dan integrasi notifikasi FCM/APNs belum diklaim siap.
 
 ---
 
-## 👥 Tim Pengembang & Jobdesk
+## 📂 Navigasi Berkas & Dokumentasi
 
-**Mata Kuliah:** Rekayasa Perangkat Lunak · **Program Studi:** Sistem Informasi · **Universitas Samudra**[cite: 1]
+### Dokumen Utama & Proposal
 
-| Avatar | Nama & NPM | Peran / Jobdesk Utama |
-| :---: | :--- | :--- |
-| <img src="https://ui-avatars.com/api/?name=Raihan+Noor&background=0D8ABC&color=fff&size=80&rounded=true" width="60" /> | **Raihan Noor** <br> `240504148` <br> *(Ketua Kelompok)* | 👑 **Project Manager & System Analyst** <br> Mengatur alur SDLC Spiral, Analisis Risiko (*Risk Assessment*), perancangan arsitektur sistem, UI/UX Design, serta memastikan sistem memenuhi kriteria *Safety-Critical*[cite: 1]. |
-| <img src="https://ui-avatars.com/api/?name=Muhammad+Najwan&background=F55252&color=fff&size=80&rounded=true" width="60" /> | **Muhammad Najwan Jabir A.** <br> `240504151` | ⚙️ **Cloud Backend & API Engineer** <br> Mengembangkan backend Python/Node.js, integrasi data real-time API BMKG/USGS, implementasi algoritma routing dinamis (PostGIS), dan manajemen Load Balancer[cite: 1, 3]. |
-| <img src="https://ui-avatars.com/api/?name=Deby+Syahdan&background=4CAF50&color=fff&size=80&rounded=true" width="60" /> | **Deby Syahdan** <br> `240504124` | 📱 **Mobile App Developer** <br> Mengembangkan aplikasi *client* (Flutter untuk Android/iOS), antarmuka navigasi peta interaktif, dan sistem notifikasi darurat (Push Notification & SOS Button)[cite: 1]. |
-| <img src="https://ui-avatars.com/api/?name=Julian+Saputra&background=9C27B0&color=fff&size=80&rounded=true" width="60" /> | **M. Julian Saputra** <br> `240504092` | 💻 **Frontend Web Developer** <br> Membangun Web Dashboard Command Center untuk BPBD menggunakan React JS, visualisasi Live Digital Twin, dan panel kontrol pemblokiran rute secara manual[cite: 1]. |
+- [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) — Ringkasan teknis untuk konteks pengembangan.
+- [Rencana Sprint](./docs/plans/) — Dokumen rencana internal Sprint 3 dan sinkronisasi.
+- [Proposal Proyek](./docs/PROPOSAL.md) — Tujuan, kebutuhan, arsitektur, risiko, dan roadmap.
+- [Slide Presentasi](./docs/Kelompok%202.pdf) — Materi presentasi kelompok.
+
+### Artefak Sprint 1 (`sprint-1/`)
+
+- [User Story & Acceptance Criteria](./sprint-1/USER-STORY.md)
+- [Function Point Analysis](./sprint-1/FUNCTION-POINT.md)
+- [Flowchart Algoritma](./sprint-1/FLOWCHART.md)
+- [Activity Diagram](./sprint-1/ACTIVITY-DIAGRAM.md)
+- [Spesifikasi REST API](./sprint-1/API-SPEC.md)
+- [Deployment Architecture](./sprint-1/DEPLOYMENT.md)
+- [UI/UX Wireframe](./sprint-1/UI-UX-WIREFRAME.md)
+
+### Artefak Sprint 2 (`sprint-2/`)
+
+- [Context Diagram](./sprint-2/CONTEXT-DIAGRAM.md)
+- [Use Case Diagram](./sprint-2/USE-CASE.md)
+- [Class Diagram & Model Data Spasial PostGIS (WGS 84 / SRID 4326)](./sprint-2/CLASS-DAN-DATABASE.md)
+- [Sequence Diagram](./sprint-2/SEQUENCE-DIAGRAM.md)
+- [State Diagram](./sprint-2/STATE-DIAGRAM.md)
+
+### Artefak Sprint 3 (`sprint-3/`, `backend/`, `frontend-dashboard/`, `mobile-app/`)
+
+- [Docker Compose PostgreSQL/PostGIS & Redis](./sprint-3/Setup-Code/docker-compose.yml)
+- [Skema Database PostGIS (`schema.sql`)](./sprint-3/Setup-Code/schema.sql)
+- [Data Seed Lokal (`seed.sql`)](./sprint-3/Setup-Code/seed.sql)
+- [Prototipe Aggregator BMKG Siklus 1](./sprint-3/Setup-Code/aggregator/fetch_bmkg.py)
+- [Unit Test Parser](./sprint-3/Setup-Code/aggregator/test_parse.py)
+- [Panduan Setup dan Pengujian](./sprint-3/Setup-Code/README.md)
+- [Backend API (Python FastAPI)](./backend/)
+- [Web Dashboard BPBD (React + Leaflet)](./frontend-dashboard/)
+- [Mobile App Warga (Flutter)](./mobile-app/)
 
 ---
 
-## ✨ Fitur Unggulan
+## ✨ Fitur & Kebutuhan Fungsional
 
-*   **Dynamic Hazard Mapping:** Visualisasi kembaran digital 2D/3D (Live Digital Twin)[cite: 1]. Memblokir rute otomatis jika terdeteksi luapan air atau zona bahaya dari API BMKG[cite: 1].
-*   **Traffic Bottleneck Avoidance:** Algoritma yang memecah pergerakan massa ke beberapa rute alternatif secara simultan agar tidak terjadi kemacetan fatal saat evakuasi[cite: 1].
-*   **Crowdsourcing Data (SOS):** Warga dapat melaporkan jalan yang tertutup/aman secara langsung melalui *smartphone*[cite: 1].
-*   **High Availability Architecture:** Menggunakan *Cloud Server* skala produksi untuk memitigasi kegagalan *network/server* saat terjadi lonjakan pengguna di tengah bencana[cite: 1].
+- **FR-01 — Resilient API Aggregation:** Pengambilan data BMKG/USGS secara periodik dengan retry dan Redis fallback cache.
+- **FR-02 — Validasi & Normalisasi:** Validasi payload serta normalisasi data geospasial ke WGS 84.
+- **FR-03 — Emergency Push Notification:** Peringatan darurat berbasis wilayah melalui FCM/APNs.
+- **FR-04 — Dynamic Hazard Mapping:** Peta bahaya RW, poligon risiko, dan titik kumpul aman.
+- **FR-05 — Dynamic Evacuation Routing:** Rekomendasi rute yang menghindari ruas berbahaya dan hitung ulang saat status berubah.
+- **FR-06 — Trust Score & Offline Queue SOS:** Laporan jalan tertutup/aman, antrean offline, dan penilaian kepercayaan.
+- **FR-07 — BPBD Manual Route Control:** Verifikasi laporan serta blokir/buka ruas secara manual.
+- **FR-08 — Digital Twin:** Snapshot software-based kondisi RW, genangan estimasi, ruas tertutup, dan warga terdampak; tidak memakai sensor fisik/IoT.
+- **FR-09 — Anti-Bottleneck:** Distribusi pengguna ke rute alternatif berdasarkan beban dan kapasitas ruas.
+- **FR-10 — Health Monitoring:** Status layanan, usia cache, dan latensi melalui `GET /v1/health`.
+
+---
+
+## 👥 Tim Pengembang
+
+**Mata Kuliah:** Rekayasa Perangkat Lunak · **Program Studi:** Informatika, Universitas Samudra
+
+| Nama & NPM | Peran |
+|---|---|
+| **Raihan Noor** · `240504148` (Ketua Kelompok) | Project Manager & System Analyst |
+| **Muhammad Najwan Jabir A.** · `240504151` | Cloud Backend & API Engineer |
+| **Deby Syahdan** · `240504124` | Mobile App Developer |
+| **M. Julian Saputra** · `240504092` | Frontend Web Developer |
 
 ---
 
 ## 🔄 Siklus Pengembangan (Model Spiral)
 
-<details>
-<summary><b>Klik untuk melihat detail tahapan pengembangan HyperEvac</b></summary>
+| Sprint / Siklus | Status | Cakupan |
+|---|---|---|
+| **Sprint 1 — Siklus Spiral 1** | **Selesai — Analisis/desain dan prototipe terbatas** | Rancangan kebutuhan awal dan aggregator BMKG dengan parsing, retry, cache lokal, dan unit test offline. |
+| **Sprint 2 — Siklus Spiral 2** | **Selesai — Pemodelan dan sinkronisasi desain** | Context/use case/class/sequence/state diagrams, kontrak API dan model data target. |
+| **Sprint 3 — Siklus Spiral 3** | **Implementasi prototipe — validasi lokal** | Tahap 3A/3B: API, worker, PostGIS/Redis, routing, Digital Twin, dashboard BPBD, aplikasi Flutter dan antrean SOS offline. Load test dan integrasi push produksi masih perlu diverifikasi. |
 
-1. **Siklus 1 (MVP Core - API Engine):** Iterasi awal berfokus pada integrasi *script aggregator* dari API BMKG & USGS (`fetch_bmkg.py`) serta pengujian notifikasi di satu area kecil[cite: 1, 4]. Evaluasi risiko berfokus pada *downtime/timeout* API publik[cite: 1].
-2. **Siklus 2 (Map & Routing Logic):** Implementasi algoritma rute dan simulasi pergerakan massa (Digital Twin Engine)[cite: 1]. Evaluasi dilakukan untuk memastikan keakuratan rute dalam menghindari genangan air[cite: 1].
-3. **Siklus 3 (Full Scale & Dashboard):** Skala penuh dengan Web Command Center untuk BPBD[cite: 1]. Fokus pada evaluasi *Load Testing* agar server tetap stabil saat trafik memuncak[cite: 1].
-</details>
+Estimasi proyek pada [Function Point Analysis](./sprint-1/FUNCTION-POINT.md): **132 UFP**, **158,40 AFP**, sekitar **6.336 LOC**, **950,4 jam-orang**, atau sekitar **13,2 minggu**.
 
 ---
 
 ## 🛠️ Tech Stack Utama
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL%20%2B%20PostGIS-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-dc382d?style=for-the-badge&logo=redis&logoColor=white)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+**Implemented:** Backend Python/FastAPI dengan PostgreSQL/PostGIS, Redis, API laporan dan operator, routing serta Digital Twin; dashboard React/TypeScript (Leaflet); aplikasi Flutter dengan peta OpenStreetMap dan antrean SOS offline. Infrastruktur Docker/SQL dan prototipe CLI BMKG tersimpan pada `sprint-3/Setup-Code/`.
+
+**Batasan:** FCM/APNs masih stub, dan load test serta deployment produksi belum diverifikasi. Digital Twin 100% berbasis perangkat lunak; tinggi genangan adalah estimasi BMKG/laporan warga/input operator, bukan pembacaan sensor.
 
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" alt=""/>
 </p>
