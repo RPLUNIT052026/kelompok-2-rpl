@@ -1,0 +1,1 @@
+"""HyperEvac FastAPI application."""
