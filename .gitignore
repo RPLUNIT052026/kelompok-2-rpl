@@ -1,0 +1,24 @@
+# Environment and secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+
+# JavaScript / TypeScript
+node_modules/
+dist/
+
+# Flutter / Dart
+mobile-app/build/
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+
+.vercel/
+**/.vercel/
+**/.env

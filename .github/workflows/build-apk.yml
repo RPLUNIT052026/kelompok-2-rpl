@@ -1,0 +1,26 @@
+﻿name: Build HyperEvac Mobile APK
+on:
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Build Release APK
+        working-directory: sprint-3/mobile-app
+        run: |
+          flutter pub get
+          flutter build apk --release --dart-define=API_BASE_URL=https://hyperevac-api.vercel.app/v1
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyperevac-mobile-release
+          path: sprint-3/mobile-app/build/app/outputs/flutter-apk/app-release.apk
